@@ -140,3 +140,10 @@ setInterval(() => {
 
   document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
 }, 1000);
+
+
+const clsHistory = () => {
+  localStorage.clear()
+  displayHistory();
+
+}

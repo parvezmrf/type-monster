@@ -148,6 +148,10 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background-color: #111111;
+}
+
 #histories {
   display: flex;
   flex-wrap: wrap;
@@ -241,6 +245,11 @@ button {
   background: #2d3032;
   text-decoration: none;
 }
+
+.button-typer:hover {
+  background: #111111;
+}
+
 
 .btn-group {
   margin: 30px 50px;

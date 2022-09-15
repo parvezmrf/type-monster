@@ -19,14 +19,86 @@
     <div class="box-container">
 
 
-        <button class="accordion">Section 1 </button>
+        <button class="accordion"> Difference Between Local Storage and Session Storage</button>
         <div class="panel-ans">
-            <p id="question-ans">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Dolores voluptatum quibusdam sequi neque ipsam ipsa architecto maxime ratione rem cupiditate, eaque
-                tenetur quas deleniti commodi ea? Totam nihil tempora explicabo.
-                Praesentium consequatur, velit inventore commodi esse alias accusantium voluptas ducimus consectetur
-                tempore. Commodi qui esse voluptatibus iure officiis perferendis eligendi iste velit cum quisquam quam,
-                asperiores quaerat enim voluptates temporibus?</p>
+            <p id="question-ans">
+                <span style="font-size:30px;">Local Storage</span> <br>
+                This read-only interface property provides access to the Document’s local storage object, the stored
+                data is stored across browser sessions. Similar to sessionStorage, except that localStorage data gets
+                cleared when the page session ends – that is when the page is closed. It is cleared when the last
+                “private” tab of a browser is closed (localStorage data for a document loaded in a private browsing or
+                incognito session).
+                <br>
+                <br>
+
+                DOMStrings are storage formats that use UTF-16 to encode data, which uses two bytes per character.
+                Strings are automatically generated from integer keys just as they are for objects. The data stored in
+                LocalStorage is specific to a protocol in the document. If the site is loaded over HTTP (e.g.,
+                http://example.com), localStorage returns a different object than if it is loaded over HTTPS (e.g.,
+                https://abc.com). <br>
+                <br>
+
+
+                If a document is loaded from a file: URL (that is, directly from the user’s local file system instead of
+                being loaded from the server) the requirements for behavior are undefined and may vary among different
+                browsers. Each file appears to be returned a different object by localStorage in all current browsers:
+                URL. Essentially, it seems to be a case of each URL: file having its own unique local storage area.
+                <br>
+                <br>
+                This behavior cannot be guaranteed because as mentioned above, the file: URL requirements remain
+                unclear. As such, there’s a possibility that browsers may change how they handle files at any time. The
+                way some browsers handle it has evolved.
+                <br><br>
+
+                Local storage has 4 methods:
+                <br><br>
+
+                (1).setItem() Method - localStorage.setItem(key)
+                <br>
+
+                (2). getItem() Method - localStorage.getItem(key)
+                <br>
+                (3). removeItem() Method -localStorage.removeItem(key) <br>
+                (4). clear() Method - localStorage.clear()
+                <br>
+                <br>
+                <br>
+                <span style="font-size:30px;">Session Storage</span> <br>
+                Session Storage objects can be accessed using the sessionStorage read-only property. The difference
+                between sessionStorage and localStorage is that localStorage data does not expire, whereas
+                sessionStorage data is cleared when the page session ends.
+                <br><br>
+                A unique page session gets created once a document is loaded in a browser tab. Page sessions are valid
+                for only one tab at a time. Pages are only saved for the amount of time that the tab or the browser is
+                open; they do not persist after the page reloads and restores. A new session is created each time a tab
+                or window is opened; this is different from session cookies. Each tab/window that is opened with the
+                same URL creates its own sessionStorage.When you duplicate a tab, the sessionStorage from the original
+                tab is copied to the duplicated tab. Closing a window/tab ends the session and clears sessionStorage
+                objects.
+                <br><br>
+                A page’s protocol determines what data is stored in sessionStorage. Particularly, data stored by scripts
+                accessed through HTTP (for example, http://abc.com) is stored in a separate object from the same site
+                accessed through HTTPS (for instance, https://abc.com). A DOMString number is two bytes per character in
+                UTF-16 DOMString format. Strings are automatically generated from integer keys just as they are for
+                objects.
+                <br><br>
+
+                Session storage has 4 methods:
+                <br><br>
+
+                (1).setItem() Method - sessionStorage.setItem(key)
+                <br>
+
+                (2). getItem() Method - sessionStorage.getItem(key)
+                <br>
+                (3). removeItem() Method -sessionStorage.removeItem(key) <br>
+                (4). clear() Method - sessionStorage.clear()
+                <br>
+
+
+
+
+            </p>
         </div>
 
         <button class="accordion">Section 2</button>

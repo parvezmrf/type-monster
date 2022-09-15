@@ -189,13 +189,13 @@ button {
 .accordion {
   color: white;
   cursor: pointer;
-  padding: 50px;
-  padding-bottom: 80px;
+  padding: 30px;
+  padding-bottom: 55px;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
-  font-size: 30px;
+  font-size: 25px;
   transition: 0.4s;
 }
 
@@ -217,7 +217,7 @@ button {
   height: 100%;
   padding: 20px;
   color: white;
-  font-size: 20px;
+  font-size: 22px;
   border-radius: 15px;
   background: rgb(255, 255, 255);
   background: linear-gradient(92.49deg,

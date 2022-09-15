@@ -42,10 +42,12 @@ const typeController = (e) => {
 
   const newLetterCorrect = validate(newLetter);
 
+
   if (newLetterCorrect) {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
+    errorCount++;
   }
 
   // check if given question text is equal to user typed text
@@ -110,7 +112,7 @@ const start = () => {
     countdownOverlay.innerHTML = `<h1>${count}</h1>`;
 
     // finished timer
-    if (count == 2) {
+    if (count == 0) {
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
       countdownOverlay.style.display = "none";
@@ -120,7 +122,7 @@ const start = () => {
       startTime = new Date().getTime();
     }
     count--;
-  }, 100);
+  }, 1000);
 
 };
 

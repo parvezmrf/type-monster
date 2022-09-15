@@ -13,19 +13,22 @@
 </head>
 
 <body>
+    <div class="btn-group">
+        <a href="index.html" data-scroll="" class="button-typer">Home</a>
+        <a href="blog.html" data-scroll="" class="button-typer">Blog</a>
+    </div>
     <h1 class="title"><img src="./logo.png" /> Blog</h1>
 
 
     <div class="box-container">
 
-
         <button class="accordion"> Difference Between Local Storage and Session Storage</button>
         <div class="panel-ans">
             <p id="question-ans">
                 <span style="font-size:30px;">Local Storage</span> <br>
-                This read-only interface property provides access to the Document’s local storage object, the stored
+                This read-only interface property provides access to the Document's local storage object, the stored
                 data is stored across browser sessions. Similar to sessionStorage, except that localStorage data gets
-                cleared when the page session ends – that is when the page is closed. It is cleared when the last
+                cleared when the page session ends - that is when the page is closed. It is cleared when the last
                 “private” tab of a browser is closed (localStorage data for a document loaded in a private browsing or
                 incognito session).
                 <br>
@@ -39,14 +42,14 @@
                 <br>
 
 
-                If a document is loaded from a file: URL (that is, directly from the user’s local file system instead of
+                If a document is loaded from a file: URL (that is, directly from the user's local file system instead of
                 being loaded from the server) the requirements for behavior are undefined and may vary among different
                 browsers. Each file appears to be returned a different object by localStorage in all current browsers:
                 URL. Essentially, it seems to be a case of each URL: file having its own unique local storage area.
                 <br>
                 <br>
                 This behavior cannot be guaranteed because as mentioned above, the file: URL requirements remain
-                unclear. As such, there’s a possibility that browsers may change how they handle files at any time. The
+                unclear. As such, there's a possibility that browsers may change how they handle files at any time. The
                 way some browsers handle it has evolved.
                 <br><br>
 
@@ -76,7 +79,7 @@
                 tab is copied to the duplicated tab. Closing a window/tab ends the session and clears sessionStorage
                 objects.
                 <br><br>
-                A page’s protocol determines what data is stored in sessionStorage. Particularly, data stored by scripts
+                A page's protocol determines what data is stored in sessionStorage. Particularly, data stored by scripts
                 accessed through HTTP (for example, http://abc.com) is stored in a separate object from the same site
                 accessed through HTTPS (for instance, https://abc.com). A DOMString number is two bytes per character in
                 UTF-16 DOMString format. Strings are automatically generated from integer keys just as they are for
@@ -100,7 +103,9 @@
 
             </p>
         </div>
-
+        <br>
+        <hr>
+        <br>
         <button class="accordion">JavaScript Global and Block Scope | Explained</button>
         <div class="panel-ans">
             <p id="question-ans">
@@ -146,18 +151,67 @@
             </code>
             </p>
         </div>
-
-        <button class="accordion">Section 3</button>
+        <br>
+        <hr>
+        <br>
+        <button class="accordion">What is an event loop in JavaScript?</button>
         <div class="panel-ans">
-            <p id="question-ans">Lorem ipsum dolor</p>
+            <p id="question-ans">The event loop is the secret behind JavaScript's asynchronous programming. JS executes
+                all operations on a single thread, but using a few smart data structures, it gives us the illusion of
+                multi-threading. Let's take a look at what happens on the back-end.<br><br>
+
+                <img src="img/img1.png" alt="">
+
+
+
+                <br><br>
+                The call stack is responsible for keeping track of all the operations in line to be executed. Whenever a
+                function is finished, it is popped from the stack.<br>
+
+                The event queue is responsible for sending new functions to the stack for processing. It follows the
+                queue data structure to maintain the correct sequence in which all operations should be sent for
+                execution.<br>
+
+                Whenever an async function is called, it is sent to a browser API. These are APIs built into the
+                browser. Based on the command received from the call stack, the API starts its own single-threaded
+                operation.
+                <br><br>
+                An example of this is the setTimeout method. When a setTimeout operation is processed in the stack, it
+                is sent to the corresponding API which waits till the specified time to send this operation back in for
+                processing.
+                <br>
+
+                Where does it send the operation? The event queue. Hence, we have a cyclic system for running async
+                operations in JavaScript. The language itself is single-threaded, but the browser APIs act as separate
+                threads.
+                <br>
+                The event loop facilitates this process; it constantly checks whether or not the call stack is empty. If
+                it is empty, new functions are added from the event queue. If it is not, then the current function call
+                is processed.
+            </p>
         </div>
+        <br>
+        <hr>
+        <br>
 
-
-        <button class="accordion">Section 4</button>
+        <button class="accordion">How we can get indefined ?</button>
         <div class="panel-ans">
-            <p id="question-ans">Lorem ipsum dolor</p>
-        </div>
+            <p id="question-ans">
 
+                <span style="font-size:30px;"> 8 way to get undefined </span> <br><br>
+
+                1. var that are is not initialized.<br>
+                2. function with no return.<br>
+                3. parameter that is not passed will be undefined.<br>
+                4. if return has nothing on the right side will return undefined.<br>
+                5. property that does't exist in the object will show undefined.<br>
+                5. index that does't exist in an object will show undefined.<br>
+                6. accessing array element ousside of the index range.<br>
+                7. deleting an element inside an array.<br>
+                8. set a value directly to undefined.<br>
+
+            </p>
+        </div>
 
 
     </div>
